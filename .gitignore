@@ -3,3 +3,15 @@
 ################################################################################
 
 /PremiumCalculator.Api/bin/Debug/netcoreapp3.1
+/PremiumCalculator.Api/obj
+/PremiumCalculator.Business/bin/Debug/netcoreapp3.1
+/PremiumCalculator.Business/obj
+/PremiumCalculator.Client/bin/Debug/netcoreapp3.1
+/PremiumCalculator.Client/obj
+/PremiumCalculator.DataAccess/bin/Debug/netcoreapp3.1
+/PremiumCalculator.DataAccess/obj
+/PremiumCalculator.Entities/bin/Debug/netcoreapp3.1
+/PremiumCalculator.Entities/obj
+/PremiumCalculator.Web/bin/Debug/netcoreapp3.1
+/PremiumCalculator.Web/obj
+/.vs/PremiumCalculator/v16

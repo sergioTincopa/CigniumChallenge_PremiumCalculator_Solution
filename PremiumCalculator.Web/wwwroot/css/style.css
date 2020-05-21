@@ -1,0 +1,10 @@
+﻿body {
+}
+
+.error-form {
+    border: 1px solid red !important;
+}
+
+.label-error {
+    color: red;
+}

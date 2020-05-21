@@ -1,0 +1,90 @@
+﻿@model CalculatorModel
+@{
+    ViewData["Title"] = "Calculate Premium Value";
+}
+
+@using PremiumCalculator.Web.Models
+
+<div id="filtros-table">
+    <div>
+        <div>
+            <div>
+                <h5>@ViewData["Title"]</h5>
+            </div>
+            <br />
+            <br />
+            <div>
+                <div class="row">
+                    <label class="col-md-3 form-control-label">Date of Birth</label>
+                    <div class="col-md-3">
+                        <input type="date" class="form-control" id="BirthDate" name="BirthDate" />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-3 form-control-label">State</div>
+                    <div class="col-md-3">
+                        <select class="form-control" name="State" id="State">
+                            <option value="">--Select--</option>
+                        </select>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <label class="col-md-3 form-control-label">Age</label>
+                    <div class="col-md-2">
+                        <input class="form-control" type="number" name="Age" id="Age"/>
+                    </div>
+                </div>
+                <br />
+            </div>
+            <div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-success" id="btnGetValue">Get Value</button>
+                    </div>
+                    <div class="col-md-2">
+                        <input class="form-control" type="text" name="PremiumValue" id="PremiumValue" readonly />
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-control" name="Frequence" id="Frequence" disabled>
+                            <option value="">--Select--</option>
+                        </select>
+                    </div>
+                    <label class="col-md-2 form-control-label">Annually</label>
+                    <div class="col-md-2">
+                        <input class="form-control" type="text" name="AnnualValue" id="AnnualValue" readonly/>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-3">
+
+                    </div>
+                    <div class="col-md-2">
+
+                    </div>
+                    <div class="col-md-3">
+
+                    </div>
+                    <label class="col-md-2 form-control-label">Monthly</label>
+                    <div class="col-md-2">
+                        <input class="form-control" type="text" name="MonthlyValue" id="MonthlyValue" readonly/>
+                    </div>
+                </div>
+                <br />
+            </div>
+        </div>
+    </div>
+</div>
+
+@{
+    <script type="text/javascript" src="~/js/script-calculator.js"></script>
+    <script type="text/javascript">
+        calculator.loadComboState();
+        calculator.loadComboFrequence();
+        calculator.clickGetValue();
+        calculator.onDateChange();
+        calculator.onFrequenceChange();
+    </script>
+}
