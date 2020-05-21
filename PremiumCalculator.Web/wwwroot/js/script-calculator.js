@@ -18,6 +18,11 @@
             let birthdateToValid = new Date(birthdate.value);
             let today = new Date();
             let ageToValid = today.getFullYear() - birthdateToValid.getFullYear();
+            let m = today.getMonth() - birthdateToValid.getMonth();
+
+            if (m < 0 || (m === 0 && today.getDate() < birthdateToValid.getDate())) {
+                ageToValid--;
+            }
 
             if (ageToValid != age.value) {
                 birthdate.classList.add('error-form');
